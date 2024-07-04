@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية أندرلخت</title>
+    <title>فروع أكتوبر</title>
+    <!-- رابط لأيقونات الفونت -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* إعدادات نمطية للصفحة */
         body {
             font-family: Arial, sans-serif;
             background-color: #54308B;
@@ -14,23 +16,106 @@
             padding: 0;
             text-align: center;
         }
-        header {
-            background-color: #F6AE68;
-            padding: 10px;
-            text-align: center;
-            font-size: 2em;
-            color: #54308B;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    header {
+    background-color: #54308B; /* لون خلفية الهيدر */
+    padding: 5px; /* تصغير الحشو */
+    font-size: 1.5em; /* تصغير حجم النص */
+    color: صاهفث; /* لون النص في الهيدر */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل الخلفية */
+    display: flex; /* استخدام Flexbox لتنسيق المحتويات */
+    justify-content: center; /* توسيط النص */
+    align-items: center; /* توسيط النص عموديًا */
+    position: relative; /* تعيين موضع نسبي */
+    height: 60px; /* تثبيت ارتفاع الهيدر */
+        }
+
+/* تغيير لون النص عند التمرير فوقه */
+header:hover {
+    color: #3a2a6a; /* تغيير لون النص عند التمرير فوقه */
+}
+
+/* أنماط للرموز الاجتماعية في الهيدر */
+.header-social-icons {
+    display: flex; /* استخدام Flexbox لتنسيق الأيقونات الاجتماعية */
+    gap: 10px; /* المسافة بين الأيقونات */
+    position: absolute; /* وضع الأيقونات بشكل مطلق */
+    left: 10px; /* المسافة من حافة الهيدر اليمنى */
+}
+
+/* أنماط للأيقونات الاجتماعية في الهيدر */
+.header-social-icons a {
+    color: #54308B; /* لون الأيقونات الاجتماعية */
+    font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+}
+
+/* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
+.header-social-icons a:hover {
+    color: #3a2a6a; /* تغيير لون الأيقونات عند التمرير فوقها */
+}
+        /* إعدادات نمطية لشعار الأكاديمية */
+        .logo {
+            position: absolute;
+            left: 710px; /* يمكنك تعديل هذا الموقع حسب رغبتك */
+            top: 50%;
+            transform: translateY(-50%);
         }
         .logo img {
-            height: 50px; /* Adjust the height as needed */
+            height: 140px; /* تكبير الشعار */
+            max-height: 100px; /* تكبير الحد الأقصى لارتفاع الشعار */
         }
+        /* إعدادات نمطية لعنوان الرأسية */
+        .header-title {
+            flex-grow: 1;
+            text-align: center;
+        }
+        /* إعدادات نمطية لأيقونات التواصل الاجتماعي في الرأسية */
+        .header-social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .header-social-icons a {
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+        }
+        /* إعدادات نمطية لشريط التنقل */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 5px 0; /* تصغير الحشو */
+        }
+        nav a {
+            color: #54308B;
+            text-decoration: none;
+            padding: 5px 10px; /* تصغير الحشو */
+            font-size: 0.8em; /* تصغير حجم النص */
+        }
+        nav a:hover {
+            background-color: #e99650;
+            border-radius: 5px;
+        }
+        /* إعدادات نمطية للكاروسيل */
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        /* إعدادات نمطية لمحتوى الصفحة */
         .container {
             padding: 20px;
-            max-width: 1200px;
+            max-width: 100px;
             margin: auto;
         }
         .card {
@@ -45,47 +130,58 @@
         .card h2 {
             margin-top: 0;
         }
-        .footer {
-            background-color: #F6AE68;
-            padding: 10px;
-            text-align: center;
-            color: #54308B;
-            position: relative;
+        .card img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            border-radius: 10px;
         }
-        .footer a {
-            color: #54308B;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
-        }
-        .footer a:hover {
-            color: #3a2a6a;
-        }
-        .footer .social-icons {
-            margin-top: 10px;
-        }
-        .branch {
-            background-color: #FFFFFF;
-            border: 2px solid #54308B;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            padding: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            color: #54308B;
-            text-align: center;
-        }
+/* إعدادات نمطية للجزء السفلي من الصفحة */
+.footer {
+    background-color: #F6AE68; /* لون خلفية الفوتر */
+    height: 40px; /* تحديد ارتفاع الفوتر */
+    padding: 2px; /* حشو الفوتر */
+    text-align: center; /* توسيط النص */
+    color: #54308B; /* لون النص في الفوتر */
+    position: relative; /* تعيين موضع نسبي */
+    transition: background-color 0.3s; /* تأثير انتقالي لتغيير لون الخلفية */
+}
 
-        .branch:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
+/* تغيير لون خلفية الفوتر عند التمرير فوقه */
+.footer:hover {
+    background-color: #e99650; /* تغيير لون خلفية الفوتر عند التمرير فوقه */
+}
 
-        .branch h2 {
-            color: #54308B;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
+/* إعدادات روابط الفوتر */
+.footer a {
+    color: #54308B; /* لون الروابط */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+    margin: 5px; /* المسافة حول الروابط */
+    font-size: 1.5em; /* حجم النص في الروابط */
+    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الروابط */
+}
 
+/* تغيير لون الروابط في الفوتر عند التمرير فوقها */
+.footer a:hover {
+    color: #3a2a6a; /* تغيير لون الروابط عند التمرير فوقها */
+}
+
+/* إعدادات الأيقونات الاجتماعية في الفوتر */
+.footer .social-icons {
+    margin-top: 5px; /* المسافة من النص إلى الأيقونات الاجتماعية */
+}
+
+/* إعدادات الأيقونات الاجتماعية في الفوتر */
+.footer .social-icons a {
+    color: white; /* لون الأيقونات الاجتماعية */
+    font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الأيقونات */
+}
+
+/* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
+.footer .social-icons a:hover {
+    color: #3a2a6a; /* تغيير لون الأيقونات عند التمرير فوقها */
         .sub-branch a {
             display: inline-block;
             background-color: #F6AE68;
@@ -95,29 +191,38 @@
             border-radius: 5px;
             transition: background-color 0.3s;
             font-size: 1.2em;
-            text-align: center;
+            margin: 5px;
         }
-
         .sub-branch a:hover {
             background-color: #e99650;
         }
-        .header-social-icons {
+        .branch {
             display: flex;
-            gap: 5px;
+            flex-direction: column;
+            align-items: center;
         }
-        .header-social-icons a {
-            color: #54308B;
-            font-size: 0.8em;
-            text-decoration: none;
+        /* إعدادات نمطية خاصة بالشاشات الصغيرة */
+        @media only screen and (max-width: 768px) {
+            .carousel {
+                height: 100vh;
+            }
+            .carousel img {
+                height: 100%;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- رأسية الصفحة -->
     <header>
+        <!-- شعار الأكاديمية -->
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="file:///E:/m.n2/ANDERLECHT%20identity/Anderlecht/Untitled-2.png" alt="Logo">
         </div>
-        <span>أكاديمية أندرلخت</span>
+        <!-- عنوان الرأسية -->
+        <div class="header-title">أكاديمية أندرلخت</div>
+        <!-- أيقونات التواصل الاجتماعي -->
         <div class="header-social-icons">
             <a href="https://www.facebook.com/YourPage" target="_blank" title="فيسبوك">
                 <i class="fab fa-facebook-f"></i>
@@ -130,46 +235,62 @@
             </a>
         </div>
     </header>
-    <div class="container">
-        <div class="card">
-            <h2>عن الأكاديمية</h2>
-            <p>الأكاديمية تضم أكثر من ٥٠ فرعًا على مستوى محافظات جمهورية مصر العربية.</p>
-        </div>
-        <div class="card">
-            <h2>برعاية وإشراف:</h2>
-            <ul>
-                <li>🟣 كابتن أحمد حسن: عميد لاعبي العالم، لاعب نادي أندرلخت البلجيكي والنادي الأهلي المصري، ومنتخب مصر.</li>
-                <li>🟣 كابتن محمد يوسف: لاعب النادي الأهلي ومنتخب مصر، والمدير الفني السابق للنادي الأهلي، والمشرف الفني لمنتخبات مصر للناشئين.</li>
-                <li>🟣 كابتن هادي خشبة: لاعب النادي الأهلي ومنتخب مصر، ومدير الكرة ومدير قطاع الكرة السابق بالنادي الأهلي.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>جميع فروع أكاديمية أندرلخت</h2>
-            <p>برجاء الضغط علي أسم الفرع لمعرفه الأسعار والمواعيد والأماكن</p>
-            <div class="branch">
-                <h2><a href="zaid.html">فروع الشيخ زايد</a></h2>
-            </div>
-            <div class="branch">
-                <h2><a href="october.html">فروع أكتوبر</a></h2>
-            </div>
-        </div>
+    
+    <!-- شريط التنقل -->
+    <nav>
+        <a href="zayed.html">فروع منطقة الشيخ زايد</a>
+        <a href="october.html">فروع منطقة أكتوبر</a>
+        <a href="hoctober.html">فروع منطقة حدائق أكتوبر</a>
+        <a href="haram.html">فروع منطقة الهرم وفيصل</a>
+        <a href="maadi.html">فروع منطقة المعادي وحلوان</a>
+        <a href="cairo_tagamo.html">فروع منطقة القاهرة والتجمع</a>
+        <a href="governorates.html">فروع المحافظات</a>
+    </nav>
+
+    <!-- قسم الكاروسيل -->
+    <div class="carousel">
+        <img src="file:///E:/m.n2/APP/%D8%A7%D8%AD%D8%AA%D8%B1%D9%81%20%D8%AA%D9%82%D9%86%D9%8A%D8%A7%D8%AA%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85.jpg" alt="Image 1" class="active">
+        <img src="file:///E:/m.n2/APP/%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF%20%D8%A8%D8%AF%D9%86%D9%8A%20%D9%88%D9%81%D9%86%D9%8A.jpg" alt="Image 2">
+        <img src="file:///E:/m.n2/APP/%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%AA%D9%86.jpg" alt="Image 3">
+        <img src="file:///E:/m.n2/APP/%D8%AD%D9%84%D9%85%D9%83%20%D9%8A%D8%A8%D8%AF%D8%A3%20%D9%87%D9%86%D8%A7.jpg" alt="Image 4">
+        <img src="file:///E:/m.n2/APP/%D9%83%D9%86%20%D8%AC%D8%B2%D8%A1%D8%A7%D9%8B.jpg" alt="Image 5">
     </div>
-    <footer class="footer">
-        جميع الحقوق محفوظة © 2024 أكاديمية أندرلخت
+
+    <!-- قسم الجزء السفلي من الصفحة -->
+    <div class="footer">
+        <p>&copy; 2024 أكاديمية أندرلخت. جميع الحقوق محفوظة.</p>
         <div class="social-icons">
             <a href="https://www.facebook.com/YourPage" target="_blank" title="فيسبوك">
                 <i class="fab fa-facebook-f"></i>
-                فيسبوك
             </a>
             <a href="https://www.instagram.com/YourProfile" target="_blank" title="إنستغرام">
                 <i class="fab fa-instagram"></i>
-                إنستغرام
             </a>
             <a href="https://wa.me/01115222020" target="_blank" title="واتساب">
                 <i class="fab fa-whatsapp"></i>
-                واتساب
             </a>
         </div>
-    </footer>
+    </div>
+
+    <script>
+        // JavaScript لإدارة وظيفة الكاروسيل
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        // تغيير الصور تلقائيًا كل 3 ثوانٍ
+        setInterval(nextImage, 3000);
+    </script>
 </body>
-</html>
+</html> 
